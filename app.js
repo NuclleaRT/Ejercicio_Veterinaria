@@ -28,7 +28,7 @@ class Conejo extends Animal{
 }
 
 let Perrito = new Perro('Chomosuke', 15, 5, 'Pastor Aleman');
-let Gatito = new Gato('Ban', 5, 3, 'Masculino');
+let Gatito = new Gato('Ban', 5, 3, 'Macho');
 let Conejito = new Conejo('Bad', 4 , 1 , 'Blanco');
 
 let veterinaria = [Perrito,Gatito,Conejito];
@@ -41,14 +41,14 @@ function mostrarDatos(){
     for(let animal of veterinaria){
         let crearLi = document.createElement('li');
     if(animal == Perrito){
-        crearLi.innerText = 'Nombre: ' + animal._nombre + '\n' + 'Peso : ' + animal._peso + 'Kg' + '\n' +
+        crearLi.innerText = 'Nombre: ' + animal._nombre + '\n' + 'Peso: ' + animal._peso + 'Kg' + '\n' +
                             'Edad: ' + animal._edad + 'años'+'\n' + 'Raza: ' + animal._raza + '\n'+ '\n';
     }else if(animal == Gatito){
-        crearLi.innerText = 'Nombre: ' + animal._nombre + '\n' + 'Peso : ' + animal._peso + 'Kg' + '\n' +
+        crearLi.innerText = 'Nombre: ' + animal._nombre + '\n' + 'Peso: ' + animal._peso + 'Kg' + '\n' +
                             'Edad: ' + animal._edad + 'años'+'\n' + 'Sexo: ' + animal._sexo + '\n' + '\n';
     }else{
-        crearLi.innerText = 'Nombre: ' + animal._nombre + '\n' + 'Peso : ' + animal._peso + 'Kg' + '\n' +
-                            'Edad: ' + animal._edad + 'años'+'\n' + 'Raza: ' + animal._color;
+        crearLi.innerText = 'Nombre: ' + animal._nombre + '\n' + 'Peso: ' + animal._peso + 'Kg' + '\n' +
+                            'Edad: ' + animal._edad + 'año'+'\n' + 'Color: ' + animal._color;
     }
 
     txtMostrar.appendChild(crearLi);
@@ -59,3 +59,7 @@ function mostrarDatos(){
         
     }
 }
+
+
+//El codigo se puede mejorar agregando el aprametro get en cada sub clase 
+//y asi evitar usar if anidados
